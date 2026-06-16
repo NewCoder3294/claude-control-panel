@@ -1,0 +1,14 @@
+node_modules/
+dist/
+*.log
+.DS_Store
+bun.lockb
+.env
+.env.local
+.superpowers/
+**/node_modules/
+frontend/dist/
+
+# Internal session handoff notes — kept locally, not part of the public repo
+HANDOFF.md
+**/*HANDOFF.md

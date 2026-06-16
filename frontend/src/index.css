@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-ink-950 text-fog-100 antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Thin, unobtrusive scrollbars. */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: theme("colors.ink.600") transparent;
+  }
+  *::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+  }
+  *::-webkit-scrollbar-thumb {
+    @apply bg-ink-600 rounded-full;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+  *::-webkit-scrollbar-thumb:hover {
+    @apply bg-ink-500;
+  }
+
+  ::selection {
+    background: rgba(26, 26, 26, 0.1);
+  }
+}
+
+@layer components {
+  /* Faint hairline grid texture for the app canvas. */
+  .console-grid {
+    background-image:
+      linear-gradient(to right, rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+}
+
+/* CodeMirror fills its container; light editor surface. */
+.cm-editor {
+  height: 100%;
+  font-size: 13px;
+}
+.cm-editor .cm-scroller {
+  font-family: theme("fontFamily.mono");
+  line-height: 1.6;
+}
+.cm-editor.cm-focused {
+  outline: none;
+}

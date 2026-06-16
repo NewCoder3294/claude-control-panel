@@ -1,0 +1,38 @@
+{
+  "name": "ccp-frontend",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Vite + React dashboard for the Claude Code Control Panel.",
+  "license": "MIT",
+  "author": "Nicolas Dos Santos",
+  "type": "module",
+  "engines": {
+    "bun": ">=1.3"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "typecheck": "tsc -b",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@codemirror/lang-json": "^6.0.1",
+    "@codemirror/lang-markdown": "^6.3.1",
+    "@uiw/react-codemirror": "^4.23.7",
+    "cytoscape": "^3.34.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/cytoscape": "^3.31.0",
+    "@types/node": "^25.9.3",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.2",
+    "vite": "^5.4.11"
+  }
+}

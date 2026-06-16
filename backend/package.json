@@ -1,0 +1,22 @@
+{
+  "name": "ccp-backend",
+  "version": "0.1.0",
+  "description": "Bun REST API for the Claude Code Control Panel — reads & manages ~/.claude.",
+  "license": "MIT",
+  "author": "Nicolas Dos Santos",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "bun": ">=1.3"
+  },
+  "scripts": {
+    "start": "bun run src/server.ts",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.14"
+  }
+}
